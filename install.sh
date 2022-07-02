@@ -56,13 +56,14 @@ sudo apt-get install -y \
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 #instalar POWERLEVEL10K THEME
-#con el stow se modifica la linea de .zshrc (ZSH_THEME=”powerlevel10k/powerlevel10k”.) para ser activado
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+#con el stow se agrega la linea al .zshrc (source ~/powerlevel10k/powerlevel10k.zsh-theme) para ser activado
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 #comando stow para linckear los archivos de configuración
 #analiza directoiros en dotfiles, segun estos borra los del sistema y linckea a los de dotfiles.
-sudo stow $HOME/.dotfiles/
+sudo stow . $HOME/.dotfiles/
 source $HOME/.zshrc
+
 
 # Node/NPM/PNPM install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash #Instala gestor de ver de node, nvm

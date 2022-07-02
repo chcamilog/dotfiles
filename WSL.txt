@@ -1,3 +1,9 @@
+no me dio bien el comando stow
+ignorar archivos en dotfiles para stow
+eliminar lo creado por error
+falta copiar el dotfile de p10k
+
+
 -instalar VS code, sincronizar ajustes.
 
 -abrir "ACTIVAR O DESACTIVAR CARACTERÍSTICAS DE WINDOWS" y activamos:
@@ -14,7 +20,9 @@
 
 -instalar Windows terminal, configurar el tema editando el fichero config con los colores deseados
 	+cambiar el start directory de Ubuntu en la terminal de windows (/home/tu_usuario)
-	+Fuente para la consola, DroidSansMono Nerd Font
+	+Fuente para la consola
+		->DroidSansMono Nerd Font
+		->MesloLGS NF (recomendada para la PL10K)
 
 
 -asignar el directorio \wsl$ como una unidad de red
@@ -26,16 +34,16 @@
 	+sudo apt-get upgrade
 	+sudo apt-get install curl git
 
--clonamos el repo con los dotfiles en el home/.dotfiles
+-clonamos el repo con los dotfiles en el home/.dotfiles (git clone https://github.com/chcamilog/dotfiles.git ~/.dotfiles)
 
--ejecutamos el script instal.sh, este realiza lo siguiente (detalles dentro del script)
+-ejecutamos el script install.sh, este realiza lo siguiente (detalles dentro del script)
 	-> instala paquetería esencial
 	-> instala Oh-my-zsh 
 	->-instala POWERLEVEL10K, comando para configurar de nuevo (p10k configure)
 	-> ejecuta stow para linkear los dotfiles
 		*linkea .zshrc que contiene el tema, los plugins, etc...
 		*linkea .gitconfig
-		*.......linkea PL10K		
+		*.......linkea p10k.zsh
 	-> instala NODE con control de versiones
 	
 -..........instalar fzf, completado inteligente con búsqueda avanzada...........(incluir en esenciales)
