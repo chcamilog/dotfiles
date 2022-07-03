@@ -9,6 +9,11 @@
 	+Fuente para la consola
 		->DroidSansMono Nerd Font
 		->MesloLGS NF (recomendada para la PL10K)
+	+tamaño de fuente 11
+	+espesor de fuente normal
+	+estilo de texto intenso negrita con colores brillantes
+	+tema de colores (nord)
+	+fondo con color morado muy oscuro
 
 -(opcional) asignar el directorio \wsl$ como una unidad de red
 	+abrir el en el explorador de windows-> (\\wsl$)
