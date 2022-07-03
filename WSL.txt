@@ -1,3 +1,10 @@
+......configurar fuentes de vscode y terminal desde vscode
+
+-instalar Nerd Fonts
+	->MesloLGS NF (recomendada para la PL10K)
+	->DroidSansMono Nerd Font (tambien la uso en la terminal)
+	->
+
 -instalar VS code, sincronizar ajustes.
 
 -instalar WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install)
