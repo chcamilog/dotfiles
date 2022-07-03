@@ -21,7 +21,7 @@
 	+estilo de texto intenso negrita con colores brillantes
 	+ notificación flash, no campana
 	+tema de terminal
-		-> Moonlight II (la mejor)
+		-> Moonlight II (el mejor)
 		-> nord
 		-> Monokai Pro
 	+fondo con color morado muy oscuro
@@ -35,12 +35,12 @@
 	+sudo apt-get upgrade
 	+sudo apt-get install curl git
 
--clonamos el repo con los dotfiles en el home/.dotfiles 
+-clonamos el repo con los dotfiles en el home/.dotfiles
 	->(git clone https://github.com/chcamilog/dotfiles.git ~/.dotfiles)
 
 -ejecutamos el script (bash install.sh), este realiza lo siguiente (detalles dentro del script)
 	-> instala paquetería esencial
-	-> instala Oh-my-zsh 
+	-> instala Oh-my-zsh
 	->-instala POWERLEVEL10K, comando para configurar de nuevo (p10k configure)
 	-> instala plugins de zsh
 	-> ejecuta stow para linkear los dotfiles
@@ -48,7 +48,7 @@
 		*linkea .gitconfig
 		*linkea p10k.zsh
 	-> instala NODE con control de versiones
-	
+
 - instalamos fzf, completado inteligente con búsqueda avanzada (no se incluye en ecensiales por que rquiere instalción)
 	-> (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf)
 	-> (~/.fzf/install)
@@ -62,7 +62,7 @@
 	+git config --global init.defaultBranch main (rama MAIN por defecto)
 	+git config --global -e (editar archivo de config)
 	+comprobar configuración-> (git config --list)
-	
+
 - (opcional) instalar plugin git Flow para la terminal / git cz (https://www.npmjs.com/package/git-cz)
 		->instalar de forma global-> (npm install -g commitizen git-cz)-> (commitizen init git-cz --save-dev --save-exact)
 		->instalar de forma local en el proyecto-> (npm install -g commitizen)-> (npm install --save-dev git-cz)-> configurar el package.json
