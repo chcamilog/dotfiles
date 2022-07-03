@@ -1,18 +1,8 @@
-comparar aliases de git con los del plugin
-
 -instalar VS code, sincronizar ajustes.
 
--abrir "ACTIVAR O DESACTIVAR CARACTERÍSTICAS DE WINDOWS" y activamos:
-	+Plataforma de máquina virtual
-	+Subsistema de Windows para linux
-
 -instalar WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install)
-
--establecer WSL version 2 como predeterminada, ejecute el comando en consola de windows (wsl --set-default-version 2)
-
--si no se instalo la version de Ubuntu deseada, instalarla, en tal caso establecerla como predeterminada.
-
--actualizar el Kernel de UNIX
+	-> verificar uso de WSL2
+	-> actualizar kernel
 
 -instalar Windows terminal, configurar el tema editando el fichero config con los colores deseados
 	+cambiar el start directory de Ubuntu en la terminal de windows (/home/tu_usuario)
@@ -20,8 +10,7 @@ comparar aliases de git con los del plugin
 		->DroidSansMono Nerd Font
 		->MesloLGS NF (recomendada para la PL10K)
 
-
--asignar el directorio \wsl$ como una unidad de red
+-(opcional) asignar el directorio \wsl$ como una unidad de red
 	+abrir el en el explorador de windows-> (\\wsl$)
 	+clic derecho en la carpeta de la distribución deseada, seleccionar (Conectar anidad de red), aceptar
 
@@ -30,12 +19,14 @@ comparar aliases de git con los del plugin
 	+sudo apt-get upgrade
 	+sudo apt-get install curl git
 
--clonamos el repo con los dotfiles en el home/.dotfiles (git clone https://github.com/chcamilog/dotfiles.git ~/.dotfiles)
+-clonamos el repo con los dotfiles en el home/.dotfiles 
+	->(git clone https://github.com/chcamilog/dotfiles.git ~/.dotfiles)
 
--ejecutamos el script install.sh, este realiza lo siguiente (detalles dentro del script)
+-ejecutamos el script (bash install.sh), este realiza lo siguiente (detalles dentro del script)
 	-> instala paquetería esencial
 	-> instala Oh-my-zsh 
 	->-instala POWERLEVEL10K, comando para configurar de nuevo (p10k configure)
+	-> instala plugins de zsh
 	-> ejecuta stow para linkear los dotfiles
 		*linkea .zshrc que contiene el tema, los plugins, etc...
 		*linkea .gitconfig
@@ -48,7 +39,7 @@ comparar aliases de git con los del plugin
 
 -........instalar Docker ...............(incluir en esenciales)
 
--(esta en los dotfiles)configurar git, configurar usuarios y correo
+-(ya estan en los dotfiles)configurar git, configurar usuarios y correo
 	+git config --global user.name "Camilo Galeano"
 	+git config --global user.email chcamilog@gmail.com
 	+git config --global core.editor "code --wait" (VS Code como editor por defecto de git)
@@ -60,52 +51,18 @@ comparar aliases de git con los del plugin
 		->instalar de forma global-> (npm install -g commitizen git-cz)-> (commitizen init git-cz --save-dev --save-exact)
 		->instalar de forma local en el proyecto-> (npm install -g commitizen)-> (npm install --save-dev git-cz)-> configurar el package.json
 
--Instalar paquete de idioma (opcional)
+-(opcional) Instalar paquete de idioma
 	+(sudo apt-get install language-pack-es language-pack-es-base)
 	+(sudo update-locale LANG=es_CO.UTF-8)
 
--.............(ya esta en el script)instalar plugins de oh my zsh 
-	+Para activar los plugins, editar con-> (nano $HOME/.zshrc)
-	+bajamos al apartado-> (plugins=(<tus_plugins>))
-	+agregamos los plugins deseados separados por espacios
-	+en la carpeta plugin del oh my zsh ya vienen muchos plugins instalados
-		->(z) (alternativa de +zoxide): recuerda las carpetas mas visitadas
-		->(sudo): agrega sudo con ESC ESC al comando anterior
-		->(colored-man-pages): paginas de man coloreadas
-	+al instalar plugins o temas nuevos quedan en la carpeta CUSTOM de oh my zsh 
-		->(zsh-autosuggestions): Sugerencias basadas en el historial
-			*clonar (git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions)
-			*con-> (nano $HOME/.zshrc), agregamos bajo la linea de los plugins esta linea (autoload -U compinit && compinit)
-			*opcional, con-> (nano $HOME/.zshrc), no importa donde, agregamos esta linea (export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"), esto cambia el color de texto de las sugerencias de autocompletado, donde 5 equivale al color (en este caso morado).
-		->(zsh-syntax-highlighting): Resaltado de sintaxis para comandos
-			*clonar (git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting)
-		->(zsh-completions): Autocompletado mejorado para comandos 
-			*clonar (git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions)
-		->		
-		->	
-
--(ya esta en el script) instalar node.js (con administrador de versiones-> {https://docs.microsoft.com/es-es/windows/dev-environment/javascript/nodejs-on-wsl})........(incluir en ecensiales)
-	+Instalar gestor de ver de node, nvm-> (curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash)
+-(opcional) instalar otras versiones de node.js ({https://docs.microsoft.com/es-es/windows/dev-environment/javascript/nodejs-on-wsl})
 	+opcional Instalar pnpm, alternativa a npm (curl -fsSL https://get.pnpm.io/install.sh | PNPM_VERSION=7.0.0-rc.7 sh -)
-	+Si usas Bash > (source ~/.bashrc), para actualizar
-	+Si usas OhMyZsh > (source ~/.zshrc), para actualizar
-	+instalar la version estable de node-> (nvm install --lts)
 	+instalar la version mas actual de node-> (nvm install node)
 	+para la versión-> (nvm use --<version_deseada>), ej: nvm use v8.2.1
 	+Listar todas las versiones de Node.js disponibles> (nvm ls-remote)
-	+Instalar algunos paquetes importantes de node-> (npm install -g svgo wipeclean ttf2woff)
 
 ...-Configurar Tmux
-
-.....asignar los aliases.
 
 ..... configurar el banner
 
 ..... cambiar el fondo de la terminal
-
-
--instalar plugin (Vue Devtools) en el navegador
-
-**abrir carpeta de linux en explorador de windows desde consola linux (explorer.exe .)
-**puedo importar y exportar las distribución de WSL para montarla en cualquier maquina (por defecto queda con usuario root)
-**comando (top) para listar los servicios
