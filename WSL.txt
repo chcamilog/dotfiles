@@ -1,8 +1,4 @@
-no me dio bien el comando stow
-ignorar archivos en dotfiles para stow
-eliminar lo creado por error
-falta copiar el dotfile de p10k
-
+comparar aliases de git con los del plugin
 
 -instalar VS code, sincronizar ajustes.
 
@@ -43,21 +39,24 @@ falta copiar el dotfile de p10k
 	-> ejecuta stow para linkear los dotfiles
 		*linkea .zshrc que contiene el tema, los plugins, etc...
 		*linkea .gitconfig
-		*.......linkea p10k.zsh
+		*linkea p10k.zsh
 	-> instala NODE con control de versiones
 	
--..........instalar fzf, completado inteligente con búsqueda avanzada...........(incluir en esenciales)
+- instalamos fzf, completado inteligente con búsqueda avanzada (no se incluye en ecensiales por que rquiere instalción)
+	-> (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf)
+	-> (~/.fzf/install)
 
 -........instalar Docker ...............(incluir en esenciales)
 
--............(esta en los dotfiles)configurar git, configurar usuarios y correo
+-(esta en los dotfiles)configurar git, configurar usuarios y correo
 	+git config --global user.name "Camilo Galeano"
 	+git config --global user.email chcamilog@gmail.com
 	+git config --global core.editor "code --wait" (VS Code como editor por defecto de git)
 	+git config --global init.defaultBranch main (rama MAIN por defecto)
 	+git config --global -e (editar archivo de config)
 	+comprobar configuración-> (git config --list)
-	+instalar plugin git Flow para la terminal git cz (https://www.npmjs.com/package/git-cz)
+	
+- (opcional) instalar plugin git Flow para la terminal / git cz (https://www.npmjs.com/package/git-cz)
 		->instalar de forma global-> (npm install -g commitizen git-cz)-> (commitizen init git-cz --save-dev --save-exact)
 		->instalar de forma local en el proyecto-> (npm install -g commitizen)-> (npm install --save-dev git-cz)-> configurar el package.json
 

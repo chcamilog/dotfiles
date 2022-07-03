@@ -80,7 +80,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme # Inicializa el tema de powerleve
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
             git
-            z
+            #z
             sudo
             colored-man-pages
         )
@@ -126,3 +126,4 @@ rm ~/.zcompdump*; compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # si existe el archivo ~/.p10k.zsh, lo carga.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

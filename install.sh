@@ -52,6 +52,9 @@ sudo apt-get install -y \
     # ffmpeg (editor de audio y video en consola)
     # stow (linckea los fichetos de configuración que estan en mi .dotfiles)
 
+# Fix batcat -> bat
+sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -61,10 +64,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 #comando stow para linckear los archivos de configuración
 #analiza directoiros en dotfiles, segun estos borra los del sistema y linckea a los de dotfiles.
-sudo stow . $HOME/.dotfiles/
+cd $HOME/.dotfiles
+stow */
 source $HOME/.zshrc
-
-
 # Node/NPM/PNPM install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash #Instala gestor de ver de node, nvm
 source $HOME/.zshrc
