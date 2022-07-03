@@ -1,11 +1,10 @@
 -instalar Nerd Fonts
 	-> Cascadia Code (Para vscode)
 	-> MesloLGS NF (recomendada para la PL10K)
-	-> JetBrains Mono
 	-> Victor mono (tiene las cursivas bonitas)
+	-> JetBrains Mono
 	-> Dank Mono (de pago)
 	-> Fira Code
-	-> DroidSansMono Nerd Font
 
 -instalar VS code, sincronizar ajustes.
 
@@ -16,12 +15,15 @@
 -instalar Windows terminal, configurar el tema editando el fichero config con los colores deseados
 	+cambiar el start directory de Ubuntu en la terminal de windows (/home/tu_usuario)
 	+Fuente para la consola
-		->DroidSansMono Nerd Font
 		->MesloLGS NF (recomendada para la PL10K)
 	+tamaño de fuente 11
 	+espesor de fuente normal
 	+estilo de texto intenso negrita con colores brillantes
-	+tema de colores (nord)
+	+ notificación flash, no campana
+	+tema de terminal
+		-> Moonlight II (la mejor)
+		-> nord
+		-> Monokai Pro
 	+fondo con color morado muy oscuro
 
 -(opcional) asignar el directorio \wsl$ como una unidad de red
