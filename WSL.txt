@@ -1,10 +1,11 @@
-......configurar fuentes de vscode y terminal desde vscode
-
 -instalar Nerd Fonts
 	-> Cascadia Code (Para vscode)
 	-> MesloLGS NF (recomendada para la PL10K)
-	-> DroidSansMono Nerd Font (tambien la uso en la terminal)
-	->
+	-> JetBrains Mono
+	-> Victor mono (tiene las cursivas bonitas)
+	-> Dank Mono (de pago)
+	-> Fira Code
+	-> DroidSansMono Nerd Font
 
 -instalar VS code, sincronizar ajustes.
 
