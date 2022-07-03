@@ -80,10 +80,15 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme # Inicializa el tema de powerleve
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
             git
-            #z
-            sudo
-            colored-man-pages
+            #z # recuerda y autocompleta las carpetas mas visitadas
+            sudo # agrega sudo con ESC ESC al comando
+            colored-man-pages # paginas de man coloreadas
+            zsh-autosuggestions
+            zsh-syntax-highlighting
+            zsh-completions
         )
+autoload -U compinit && compinit #actualiza el historial de comandos
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4" #cambia el color de las sugerencias de autocompletado
 
 source $ZSH/oh-my-zsh.sh
 

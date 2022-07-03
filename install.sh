@@ -58,15 +58,18 @@ sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+# instalar plugins para zsh (quedan en la carpeta CUSTOM de oh my zsh)
+# (zsh-autosuggestions): Sugerencias basadas en el historial
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# (zsh-syntax-highlighting): Resaltado de sintaxis para comandos
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# (zsh-completions): Autocompletado mejorado para comandos
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
 #instalar POWERLEVEL10K THEME
 #con el stow se agrega la linea al .zshrc (source ~/powerlevel10k/powerlevel10k.zsh-theme) para ser activado
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
-#comando stow para linckear los archivos de configuración
-#analiza directoiros en dotfiles, segun estos borra los del sistema y linckea a los de dotfiles.
-cd $HOME/.dotfiles
-stow */
-source $HOME/.zshrc
 # Node/NPM/PNPM install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash #Instala gestor de ver de node, nvm
 source $HOME/.zshrc
@@ -76,6 +79,12 @@ npm install -g svgo wipeclean ttf2woff #Instala algunos paquetes importantes de 
 
 # terminal por defecto  ZSH
 sudo chsh -s /usr/bin/zsh
+
+#comando stow para linckear los archivos de configuración
+#analiza directoiros en dotfiles, segun estos borra los del sistema y linckea a los de dotfiles.
+cd $HOME/.dotfiles
+stow */
+source $HOME/.zshrc
 
 # ejecutar zsh
 zsh
