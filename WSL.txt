@@ -1,10 +1,10 @@
 -instalar Nerd Fonts
-	-> Cascadia Code (Para vscode)
-	-> MesloLGS NF (recomendada para la PL10K)
-	-> Victor mono (tiene las cursivas bonitas)
-	-> JetBrains Mono
-	-> Dank Mono (de pago)
-	-> Fira Code
+	-> Cascadia Code (Para vscode, en github)
+	-> MesloLGS NF (recomendada para la PL10K, en repo p10k)
+	-> Victor mono (cursivas bonitas, https://rubjo.github.io/victor-mono/)
+	-> JetBrains Mono (https://www.jetbrains.com/lp/mono/)
+	-> Dank Mono (de pago, en mi drive)
+	-> Fira Code (en github)
 
 -instalar VS code, sincronizar ajustes.
 
